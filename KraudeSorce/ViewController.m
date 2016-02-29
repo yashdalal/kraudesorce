@@ -46,7 +46,7 @@
     altitude.text = [NSString stringWithFormat:@"%.0f m",crnLoc.altitude];
     speed.text = [NSString stringWithFormat:@"%.1f m/s", crnLoc.speed];
     
-    if(crnLoc.coordinate.latitude>37 && crnLoc.coordinate.latitude< 38 && crnLoc.coordinate.longitude<-122 && crnLoc.coordinate.longitude>-123){
+    if(crnLoc.coordinate.latitude>38.62 && crnLoc.coordinate.latitude< 38.64 && crnLoc.coordinate.longitude>-90.31 && crnLoc.coordinate.longitude<-90.29){
         self.view.backgroundColor = [UIColor greenColor];
     }else{
         self.view.backgroundColor = [UIColor whiteColor];
