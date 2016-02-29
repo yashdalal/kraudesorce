@@ -18,6 +18,7 @@
 		2A2424851C7E1F7C001157FA /* KraudeSorceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2424841C7E1F7C001157FA /* KraudeSorceUITests.m */; };
 		2A2424931C7E1FB0001157FA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2424921C7E1FB0001157FA /* CoreLocation.framework */; };
 		2A8EAF171C7FD7D30023DBE6 /* holmes.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2A8EAF161C7FD7D30023DBE6 /* holmes.gpx */; };
+		D34F4F5F15AC857AFCAB701F /* libPods-KraudeSorce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCABDF4812E120FEBE5558B6 /* libPods-KraudeSorce.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,9 @@
 		2A2424861C7E1F7C001157FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A2424921C7E1FB0001157FA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2A8EAF161C7FD7D30023DBE6 /* holmes.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = holmes.gpx; sourceTree = "<group>"; };
+		84321CD222AC4074CC13804A /* Pods-KraudeSorce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KraudeSorce.release.xcconfig"; path = "Pods/Target Support Files/Pods-KraudeSorce/Pods-KraudeSorce.release.xcconfig"; sourceTree = "<group>"; };
+		D7626600ED7A4F3F30D1D1C0 /* Pods-KraudeSorce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KraudeSorce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KraudeSorce/Pods-KraudeSorce.debug.xcconfig"; sourceTree = "<group>"; };
+		DCABDF4812E120FEBE5558B6 /* libPods-KraudeSorce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KraudeSorce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A2424931C7E1FB0001157FA /* CoreLocation.framework in Frameworks */,
+				D34F4F5F15AC857AFCAB701F /* libPods-KraudeSorce.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +99,8 @@
 				2A2424781C7E1F7C001157FA /* KraudeSorceTests */,
 				2A2424831C7E1F7C001157FA /* KraudeSorceUITests */,
 				2A24245A1C7E1F7B001157FA /* Products */,
+				E29534B50094C7DCA467D154 /* Pods */,
+				EA4AB04E63EBD818F28104DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +157,23 @@
 			path = KraudeSorceUITests;
 			sourceTree = "<group>";
 		};
+		E29534B50094C7DCA467D154 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7626600ED7A4F3F30D1D1C0 /* Pods-KraudeSorce.debug.xcconfig */,
+				84321CD222AC4074CC13804A /* Pods-KraudeSorce.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA4AB04E63EBD818F28104DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCABDF4812E120FEBE5558B6 /* libPods-KraudeSorce.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A2424891C7E1F7C001157FA /* Build configuration list for PBXNativeTarget "KraudeSorce" */;
 			buildPhases = (
+				3860F2C7B2959321EB447145 /* Check Pods Manifest.lock */,
 				2A2424551C7E1F7B001157FA /* Sources */,
 				2A2424561C7E1F7B001157FA /* Frameworks */,
 				2A2424571C7E1F7B001157FA /* Resources */,
+				69842E8D03A8A1E89608F1F4 /* Embed Pods Frameworks */,
+				184CF35502E945AC3B41C62B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,6 +302,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		184CF35502E945AC3B41C62B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KraudeSorce/Pods-KraudeSorce-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3860F2C7B2959321EB447145 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		69842E8D03A8A1E89608F1F4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KraudeSorce/Pods-KraudeSorce-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2A2424551C7E1F7B001157FA /* Sources */ = {
@@ -421,6 +496,7 @@
 		};
 		2A24248A1C7E1F7C001157FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7626600ED7A4F3F30D1D1C0 /* Pods-KraudeSorce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KraudeSorce/Info.plist;
@@ -432,6 +508,7 @@
 		};
 		2A24248B1C7E1F7C001157FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84321CD222AC4074CC13804A /* Pods-KraudeSorce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KraudeSorce/Info.plist;

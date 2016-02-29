@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <Firebase/Firebase.h>
 
 @interface ViewController ()
 
@@ -38,6 +39,7 @@
     [self presentViewController:errorAlert animated:YES completion:nil];
     NSLog(@"Error: %@",error.description);
 }
+
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *crnLoc = [locations lastObject];
@@ -45,7 +47,10 @@
     longitude.text = [NSString stringWithFormat:@"%.8f",crnLoc.coordinate.longitude];
     altitude.text = [NSString stringWithFormat:@"%.0f m",crnLoc.altitude];
     speed.text = [NSString stringWithFormat:@"%.1f m/s", crnLoc.speed];
-    
+    // Create a reference to a Firebase database URL
+    Firebase *myRootRef = [[Firebase alloc] initWithUrl:@"https://fiery-inferno-2827.firebaseio.com"];
+    // Write data to Firebase
+    [myRootRef setValue:@"not testing"];
     if(crnLoc.coordinate.latitude>37 && crnLoc.coordinate.latitude< 38 && crnLoc.coordinate.longitude<-122 && crnLoc.coordinate.longitude>-123){
         self.view.backgroundColor = [UIColor greenColor];
     }else{
