@@ -18,6 +18,8 @@
 		2A2424851C7E1F7C001157FA /* KraudeSorceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2424841C7E1F7C001157FA /* KraudeSorceUITests.m */; };
 		2A2424931C7E1FB0001157FA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2424921C7E1FB0001157FA /* CoreLocation.framework */; };
 		2A8EAF171C7FD7D30023DBE6 /* holmes.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2A8EAF161C7FD7D30023DBE6 /* holmes.gpx */; };
+		2AC432BB1C87504E00B5DA16 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC432BA1C87504E00B5DA16 /* LoginViewController.m */; };
+		2AC432BE1C8754FE00B5DA16 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC432BD1C8754FE00B5DA16 /* RegisterViewController.m */; };
 		D34F4F5F15AC857AFCAB701F /* libPods-KraudeSorce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCABDF4812E120FEBE5558B6 /* libPods-KraudeSorce.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,10 @@
 		2A2424861C7E1F7C001157FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A2424921C7E1FB0001157FA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2A8EAF161C7FD7D30023DBE6 /* holmes.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = holmes.gpx; sourceTree = "<group>"; };
+		2AC432B91C87504E00B5DA16 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2AC432BA1C87504E00B5DA16 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2AC432BC1C8754FE00B5DA16 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		2AC432BD1C8754FE00B5DA16 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		84321CD222AC4074CC13804A /* Pods-KraudeSorce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KraudeSorce.release.xcconfig"; path = "Pods/Target Support Files/Pods-KraudeSorce/Pods-KraudeSorce.release.xcconfig"; sourceTree = "<group>"; };
 		D7626600ED7A4F3F30D1D1C0 /* Pods-KraudeSorce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KraudeSorce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KraudeSorce/Pods-KraudeSorce.debug.xcconfig"; sourceTree = "<group>"; };
 		DCABDF4812E120FEBE5558B6 /* libPods-KraudeSorce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KraudeSorce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +133,10 @@
 				2A2424701C7E1F7C001157FA /* Info.plist */,
 				2A2424681C7E1F7B001157FA /* KraudeSorce.xcdatamodeld */,
 				2A24245C1C7E1F7B001157FA /* Supporting Files */,
+				2AC432B91C87504E00B5DA16 /* LoginViewController.h */,
+				2AC432BA1C87504E00B5DA16 /* LoginViewController.m */,
+				2AC432BC1C8754FE00B5DA16 /* RegisterViewController.h */,
+				2AC432BD1C8754FE00B5DA16 /* RegisterViewController.m */,
 			);
 			path = KraudeSorce;
 			sourceTree = "<group>";
@@ -357,9 +367,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A24246A1C7E1F7B001157FA /* KraudeSorce.xcdatamodeld in Sources */,
+				2AC432BE1C8754FE00B5DA16 /* RegisterViewController.m in Sources */,
 				2A2424641C7E1F7B001157FA /* ViewController.m in Sources */,
 				2A2424611C7E1F7B001157FA /* AppDelegate.m in Sources */,
 				2A24245E1C7E1F7B001157FA /* main.m in Sources */,
+				2AC432BB1C87504E00B5DA16 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,6 +24,7 @@
         [locationManager requestWhenInUseAuthorization];
     }
     [locationManager startUpdatingLocation];  //requesting location updates
+    NSLog(@"got here");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,9 +49,22 @@
     speed.text = [NSString stringWithFormat:@"%.1f m/s", crnLoc.speed];
     
     // Create a reference to a Firebase database URL
-    Firebase *myRootRef = [[Firebase alloc] initWithUrl:@"https://fiery-inferno-2827.firebaseio.com"];
+    Firebase *ref = [[Firebase alloc] initWithUrl:@"https://fiery-inferno-2827.firebaseio.com"];
     // Write data to Firebase
-    [myRootRef setValue:@"not testing"];
+    NSDictionary *alanisawesome = @{
+                                    @"full_name" : @"Alan Turing",
+                                    @"date_of_birth": @"June 23, 1912"
+                                    };
+    NSDictionary *gracehop = @{
+                               @"full_name" : @"Grace Hopper",
+                               @"date_of_birth": @"December 9, 1906"
+                               };
+    Firebase *usersRef = [ref childByAppendingPath: @"users"];
+    NSDictionary *users = @{
+                            @"alanisawesome": alanisawesome,
+                            @"gracehop": gracehop
+                            };
+    [usersRef setValue: users];
     
     if(crnLoc.coordinate.latitude>38.62 && crnLoc.coordinate.latitude< 38.64 && crnLoc.coordinate.longitude>-90.31 && crnLoc.coordinate.longitude<-90.29){
         self.view.backgroundColor = [UIColor greenColor];
