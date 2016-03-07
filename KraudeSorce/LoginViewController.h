@@ -11,8 +11,7 @@
 @interface LoginViewController : UIViewController{
     IBOutlet UITextField *usernamefield;
     IBOutlet UITextField *passwordfield;
-    
-    NSDictionary *infodictionary;
+    IBOutlet UILabel *errorMessage;
 }
 
 -(IBAction)buttontapped:(id)sender;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8yj-o1-FXS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -63,6 +63,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQS-rr-xDd">
+                                <rect key="frame" x="171" y="489" width="258" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -81,6 +87,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorMessage" destination="eQS-rr-xDd" id="tHY-wj-8ff"/>
                         <outlet property="passwordfield" destination="BNq-bM-pk3" id="zhB-4w-H1c"/>
                         <outlet property="usernamefield" destination="Zp5-yD-xqe" id="Xew-7s-TdQ"/>
                     </connections>
@@ -121,8 +128,11 @@
                                     <action selector="buttontapped:" destination="ehl-9e-bop" eventType="touchUpInside" id="Xf0-g0-kdu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTJ-Ei-ni1">
-                                <rect key="frame" x="266" y="407" width="69" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTJ-Ei-ni1">
+                                <rect key="frame" x="150" y="407" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Dyk-h1-Pvu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -139,21 +149,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="QTJ-Ei-ni1" firstAttribute="top" secondItem="Lhd-Tr-AZ6" secondAttribute="bottom" constant="48" id="18E-Kc-3TB"/>
                             <constraint firstItem="OcT-yM-sfV" firstAttribute="top" secondItem="Fpe-Sa-yen" secondAttribute="bottom" constant="71" id="2QI-hz-PAt"/>
+                            <constraint firstItem="QTJ-Ei-ni1" firstAttribute="trailing" secondItem="n4v-g3-xQ5" secondAttribute="trailing" id="5Yo-bC-1Qs"/>
+                            <constraint firstItem="QTJ-Ei-ni1" firstAttribute="leading" secondItem="n4v-g3-xQ5" secondAttribute="leading" id="634-kQ-1TJ"/>
                             <constraint firstItem="Lhd-Tr-AZ6" firstAttribute="top" secondItem="n4v-g3-xQ5" secondAttribute="bottom" constant="61" id="6mA-Wn-d9N"/>
                             <constraint firstItem="OcT-yM-sfV" firstAttribute="top" secondItem="nmq-JZ-b4Y" secondAttribute="bottom" constant="151" id="7g5-X5-liM"/>
                             <constraint firstItem="n4v-g3-xQ5" firstAttribute="top" secondItem="OcT-yM-sfV" secondAttribute="bottom" constant="37" id="9Gx-Gf-hIv"/>
                             <constraint firstItem="Lhd-Tr-AZ6" firstAttribute="centerX" secondItem="n4v-g3-xQ5" secondAttribute="centerX" id="C2x-o2-NBQ"/>
                             <constraint firstItem="Fpe-Sa-yen" firstAttribute="top" secondItem="nmq-JZ-b4Y" secondAttribute="bottom" constant="18" id="Kid-O7-p2l"/>
                             <constraint firstItem="Fpe-Sa-yen" firstAttribute="centerX" secondItem="OcT-yM-sfV" secondAttribute="centerX" id="LpT-gX-kol"/>
-                            <constraint firstItem="Lhd-Tr-AZ6" firstAttribute="centerX" secondItem="QTJ-Ei-ni1" secondAttribute="centerX" id="NCU-kF-ib2"/>
                             <constraint firstItem="n4v-g3-xQ5" firstAttribute="leading" secondItem="OcT-yM-sfV" secondAttribute="leading" id="ReZ-uY-8mB"/>
                             <constraint firstItem="n4v-g3-xQ5" firstAttribute="trailing" secondItem="OcT-yM-sfV" secondAttribute="trailing" id="daN-rs-3d8"/>
-                            <constraint firstItem="QTJ-Ei-ni1" firstAttribute="top" secondItem="Lhd-Tr-AZ6" secondAttribute="bottom" constant="48" id="icM-H6-Sh1"/>
                             <constraint firstItem="OcT-yM-sfV" firstAttribute="centerX" secondItem="8ea-UK-2rt" secondAttribute="centerX" id="zZe-bf-ccn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorMessage" destination="QTJ-Ei-ni1" id="oPr-Vc-khS"/>
                         <outlet property="passwordfield" destination="n4v-g3-xQ5" id="evW-RA-ZHs"/>
                         <outlet property="usernamefield" destination="OcT-yM-sfV" id="Fg6-wD-jB3"/>
                     </connections>

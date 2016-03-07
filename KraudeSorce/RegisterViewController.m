@@ -31,7 +31,16 @@
     // Write data to Firebase
     [ref createUser:usernamefield.text password:passwordfield.text withValueCompletionBlock:^(NSError *error, NSDictionary *result) {
         if (error) {
-            NSLog(@"%@",error);
+            switch (error.code) {
+                case FAuthenticationErrorEmailTaken:
+                    [errorMessage setText:@"The specified email is already in use."];
+                    break;
+                case FAuthenticationErrorInvalidEmail:
+                    [errorMessage setText:@"The specified email is not a valid email."];
+                    break;
+                default:
+                    break;
+            }
         } else {
             NSString *uid = [result objectForKey:@"uid"];
             NSLog(@"Successfully created user account with uid: %@", uid);

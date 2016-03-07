@@ -36,13 +36,13 @@ withCompletionBlock:^(NSError *error, FAuthData *authData) {
         if (error) {
             switch(error.code) {
                 case FAuthenticationErrorUserDoesNotExist:
-                    // Handle invalid user
+                    errorMessage.text = @"This user does not exist";
                     break;
                 case FAuthenticationErrorInvalidEmail:
-                    // Handle invalid email
+                    errorMessage.text =@"Invalid Email Address";
                     break;
                 case FAuthenticationErrorInvalidPassword:
-                    // Handle invalid password
+                    errorMessage.text = @"Password doesn't match";
                     break;
                 default:
                     break;

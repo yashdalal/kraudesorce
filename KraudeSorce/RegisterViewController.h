@@ -11,6 +11,7 @@
 @interface RegisterViewController : UIViewController{
     IBOutlet UITextField *usernamefield;
     IBOutlet UITextField *passwordfield;
+    IBOutlet UILabel *errorMessage;
 }
 
 -(IBAction)buttontapped:(id)sender;
