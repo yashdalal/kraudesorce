@@ -34,12 +34,24 @@ static NSString * const FirebaseURL = @"https://fiery-inferno-2827.firebaseio.co
     [ref authUser:usernamefield.text password:passwordfield.text
 withCompletionBlock:^(NSError *error, FAuthData *authData) {
         if (error) {
-            NSLog(@"%@",error);
+            switch(error.code) {
+                case FAuthenticationErrorUserDoesNotExist:
+                    // Handle invalid user
+                    break;
+                case FAuthenticationErrorInvalidEmail:
+                    // Handle invalid email
+                    break;
+                case FAuthenticationErrorInvalidPassword:
+                    // Handle invalid password
+                    break;
+                default:
+                    break;
+            }
         } else {
             NSLog(@"successfully logged in with %@",authData);
 //            [self performSegueWithIdentifier:@ sender:(nullable id)]
-            ViewController *vc = [[ViewController alloc]init];
-            [self presentViewController:vc animated:YES completion:nil];
+//            ViewController *vc = [[ViewController alloc]init];
+//            [self presentViewController:vc animated:YES completion:nil];
         }
     }];
 }

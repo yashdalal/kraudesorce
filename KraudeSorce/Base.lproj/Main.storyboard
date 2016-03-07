@@ -31,6 +31,9 @@
                                     <constraint firstAttribute="height" constant="30" id="8DS-aw-gr9"/>
                                 </constraints>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="buttontapped:" destination="8yj-o1-FXS" eventType="touchUpInside" id="Q31-6M-fXw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvi-v8-OOR">
                                 <rect key="frame" x="272" y="422" width="57" height="30"/>
