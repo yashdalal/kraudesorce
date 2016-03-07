@@ -9,11 +9,16 @@
 #import "ViewController.h"
 #import <Firebase/Firebase.h>
 
+static NSString * const FirebaseURL = @"https://fiery-inferno-2827.firebaseio.com";
+
 @interface ViewController ()
 
 @end
 
-@implementation ViewController 
+@implementation ViewController
+
+BOOL isInHolmesLounge = NO;
+NSInteger userCount;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,7 +29,6 @@
         [locationManager requestWhenInUseAuthorization];
     }
     [locationManager startUpdatingLocation];  //requesting location updates
-    NSLog(@"got here");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,26 +53,49 @@
     speed.text = [NSString stringWithFormat:@"%.1f m/s", crnLoc.speed];
     
     // Create a reference to a Firebase database URL
-    Firebase *ref = [[Firebase alloc] initWithUrl:@"https://fiery-inferno-2827.firebaseio.com"];
-    // Write data to Firebase
-    NSDictionary *alanisawesome = @{
-                                    @"full_name" : @"Alan Turing",
-                                    @"date_of_birth": @"June 23, 1912"
-                                    };
-    NSDictionary *gracehop = @{
-                               @"full_name" : @"Grace Hopper",
-                               @"date_of_birth": @"December 9, 1906"
-                               };
-    Firebase *usersRef = [ref childByAppendingPath: @"users"];
-    NSDictionary *users = @{
-                            @"alanisawesome": alanisawesome,
-                            @"gracehop": gracehop
-                            };
-    [usersRef setValue: users];
+    Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/locations/holmesLounge",FirebaseURL]];
     
-    if(crnLoc.coordinate.latitude>38.62 && crnLoc.coordinate.latitude< 38.64 && crnLoc.coordinate.longitude>-90.31 && crnLoc.coordinate.longitude<-90.29){
+    
+    
+   
+
+    
+    if(crnLoc.coordinate.latitude>38 && crnLoc.coordinate.latitude< 39 && crnLoc.coordinate.longitude<-90 && crnLoc.coordinate.longitude>-91){
+        
+        if(!isInHolmesLounge){
+            
+            [ref observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *holmesSnapshot) {
+                NSLog(@"%@", holmesSnapshot.value[@"userCount"]);
+                userCount = [holmesSnapshot.value[@"userCount"] integerValue];
+                
+            } withCancelBlock:^(NSError *error) {
+                NSLog(@"%@", error.description);
+            }];
+            userCount++;
+            
+            //overwrite database usercount with new one (increased by 1)
+            Firebase *countRef = [ref childByAppendingPath: @"userCount"];
+            [countRef setValue: [NSString stringWithFormat:@"%ld",(long)userCount]];
+            isInHolmesLounge = YES;
+        }
         self.view.backgroundColor = [UIColor greenColor];
     }else{
+        if(isInHolmesLounge){
+            
+            [ref observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *holmesSnapshot) {
+                NSLog(@"%@", holmesSnapshot.value[@"userCount"]);
+                userCount = [holmesSnapshot.value[@"userCount"] integerValue];
+                
+            } withCancelBlock:^(NSError *error) {
+                NSLog(@"%@", error.description);
+            }];
+            userCount--;
+            
+            //overwrite database usercount with new one (increased by 1)
+            Firebase *countRef = [ref childByAppendingPath: @"userCount"];
+            [countRef setValue: [NSString stringWithFormat:@"%ld",(long)userCount]];
+            isInHolmesLounge = NO;
+        }
         self.view.backgroundColor = [UIColor whiteColor];
     }
     
