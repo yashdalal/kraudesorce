@@ -45,6 +45,7 @@ withCompletionBlock:^(NSError *error, FAuthData *authData) {
                     errorMessage.text = @"Password doesn't match";
                     break;
                 default:
+                    errorMessage.text = @"Error logging in";
                     break;
             }
         } else {
