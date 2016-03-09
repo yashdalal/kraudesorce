@@ -8,7 +8,7 @@
 
 #import "LoginViewController.h"
 #import <Firebase/Firebase.h>
-#import "ViewController.h"
+
 
 static NSString * const FirebaseURL = @"https://fiery-inferno-2827.firebaseio.com";
 
@@ -62,9 +62,7 @@ withCompletionBlock:^(NSError *error, FAuthData *authData) {
             }
         } else {
             NSLog(@"successfully logged in with %@",authData);
-//            [self performSegueWithIdentifier:@ sender:(nullable id)]
-            ViewController *vc = [[ViewController alloc]init];
-            [self presentViewController:vc animated:YES completion:nil];
+            [self performSegueWithIdentifier:@"location" sender:self];
         }
     }];
 }

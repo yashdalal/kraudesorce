@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8yj-o1-FXS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -30,7 +30,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttontapped:" destination="8yj-o1-FXS" eventType="touchUpInside" id="Q31-6M-fXw"/>
+                                    <action selector="buttontapped:" destination="8yj-o1-FXS" eventType="touchUpInside" id="CM8-v3-xXq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KraudeSorce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Uv-4x-PEC">
@@ -109,6 +109,7 @@
                         <outlet property="errorMessage" destination="eQS-rr-xDd" id="tHY-wj-8ff"/>
                         <outlet property="passwordfield" destination="BNq-bM-pk3" id="zhB-4w-H1c"/>
                         <outlet property="usernamefield" destination="Zp5-yD-xqe" id="Xew-7s-TdQ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="location" id="bt1-2u-9c7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgT-JZ-Pt7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -173,7 +174,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttontapped:" destination="ehl-9e-bop" eventType="touchUpInside" id="HXt-jR-8q9"/>
                                     <segue destination="8yj-o1-FXS" kind="show" id="d6s-bN-Inh"/>
                                 </connections>
                             </button>
@@ -217,10 +217,10 @@
             </objects>
             <point key="canvasLocation" x="256" y="599"/>
         </scene>
-        <!--View Controller-->
+        <!--location-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="location" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="location" title="location" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>

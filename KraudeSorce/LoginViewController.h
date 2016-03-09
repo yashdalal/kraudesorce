@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UnderlineTextField.h"
+#import "ViewController.h"
 
 @interface LoginViewController : UIViewController{
     IBOutlet UnderlineTextField *usernamefield;

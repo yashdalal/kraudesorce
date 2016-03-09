@@ -30,6 +30,7 @@ NSInteger userCount;
         [locationManager requestWhenInUseAuthorization];
     }
     [locationManager startUpdatingLocation];  //requesting location updates
+    NSLog(@"poop");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,6 +48,7 @@ NSInteger userCount;
 }
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
+    NSLog(@"got here");
     CLLocation *crnLoc = [locations lastObject];
     latitude.text = [NSString stringWithFormat:@"%.8f",crnLoc.coordinate.latitude];
     longitude.text = [NSString stringWithFormat:@"%.8f",crnLoc.coordinate.longitude];
@@ -56,10 +58,6 @@ NSInteger userCount;
     // Create a reference to a Firebase database URL
     Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/locations/holmesLounge",FirebaseURL]];
     
-    
-    
-   
-
     
     if(crnLoc.coordinate.latitude>38 && crnLoc.coordinate.latitude< 39 && crnLoc.coordinate.longitude<-90 && crnLoc.coordinate.longitude>-91){
         
