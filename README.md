@@ -39,6 +39,9 @@ Features
 	 - Reformats IP address to a Nmap compatible format
 	 - Calls Nmap and exports data to an XML file
 	 - Parse XML file to get number of currently connected devices
+ - JS Script to communicate with Firebase
+	 - Can send current hosts data
+	 - Can pull current user data from server
  
 
 Screenshots
