@@ -1,0 +1,12 @@
+ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2 > ip.txt;
+grep -o '.*[.]' ip.txt > ip2.txt;
+sed 's/$/*/' ip2.txt > ip3.txt;
+nmap -sP -iL ip3.txt > nmap_output.txt;
+
+grep hosts nmap_output.txt > nmap_output2.txt;
+awk -F'[()]' '{print $2}' nmap_output2.txt > nmap_output3.txt;
+awk '{print $1}' nmap_output3.txt > hosts.txt;
+rm -rf ip.txt ip2.txt ip3.txt nmap_output.txt nmap_output2.txt nmap_output3.txt;
+cat hosts.txt;
+
+ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2 > ip.txt;grep -o '.*[.]' ip.txt > ip2.txt;sed 's/$/*/' ip2.txt > ip3.txt;nmap -sP -iL ip3.txt > nmap_output.txt;grep hosts nmap_output.txt > nmap_output2.txt;awk -F'[()]' '{print $2}' nmap_output2.txt > nmap_output3.txt;awk '{print $1}' nmap_output3.txt > hosts.txt;rm -rf ip.txt ip2.txt ip3.txt nmap_output.txt nmap_output2.txt nmap_output3.txt;cat hosts.txt;
