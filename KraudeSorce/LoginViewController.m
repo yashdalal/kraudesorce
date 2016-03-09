@@ -19,10 +19,22 @@ static NSString * const FirebaseURL = @"https://fiery-inferno-2827.firebaseio.co
 @implementation LoginViewController
 
 - (void)viewDidLoad {
+//    [self setBottomBorder:usernamefield];
+//    [self setBottomBorder:passwordfield];
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
 }
+//
+//-(void) setBottomBorder: (UITextField*)tf{
+//    CALayer *border = [CALayer layer];
+//    CGFloat borderWidth = 1;
+//    border.borderColor = [UIColor darkGrayColor].CGColor;
+//    border.frame = CGRectMake(0, tf.frame.size.height - borderWidth, tf.frame.size.width, usernamefield.frame.size.height);
+//    border.borderWidth = borderWidth;
+//    [tf.layer addSublayer:border];
+//    tf.layer.masksToBounds = YES;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -39,7 +51,7 @@ withCompletionBlock:^(NSError *error, FAuthData *authData) {
                     errorMessage.text = @"This user does not exist";
                     break;
                 case FAuthenticationErrorInvalidEmail:
-                    errorMessage.text =@"Invalid Email Address";
+                    errorMessage.text = @"Invalid Email Address";
                     break;
                 case FAuthenticationErrorInvalidPassword:
                     errorMessage.text = @"Password doesn't match";
@@ -51,8 +63,8 @@ withCompletionBlock:^(NSError *error, FAuthData *authData) {
         } else {
             NSLog(@"successfully logged in with %@",authData);
 //            [self performSegueWithIdentifier:@ sender:(nullable id)]
-//            ViewController *vc = [[ViewController alloc]init];
-//            [self presentViewController:vc animated:YES completion:nil];
+            ViewController *vc = [[ViewController alloc]init];
+            [self presentViewController:vc animated:YES completion:nil];
         }
     }];
 }

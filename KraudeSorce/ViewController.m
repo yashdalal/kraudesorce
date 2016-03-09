@@ -22,6 +22,7 @@ NSInteger userCount;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"poop");
     locationManager = [[CLLocationManager alloc]init]; // initializing locationManager
     locationManager.delegate = self; // we set the delegate of locationManager to self.
     locationManager.desiredAccuracy = kCLLocationAccuracyBest; // setting the accuracy
