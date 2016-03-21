@@ -59,10 +59,10 @@ App when user is not Holmes Lounge
 
 App when user is in Holmes Lounge
 <p align="center">
-![nmap example output](http://i.imgur.com/IpyGTd7.png)
+	<img alt="nmap example output" src="http://i.imgur.com/IpyGTd7.png">
 </p>
 Nap example output
 <p align="center">
-![nmap sample output](http://i.imgur.com/xIjsbnM.png)
+	<img alt="nmap sample output" src="http://i.imgur.com/xIjsbnM.png">
 </p>
 Nmap hostCount sample output
