@@ -58,11 +58,11 @@ App when user is not Holmes Lounge
 ![User not in Holmes Lounge](http://i.imgur.com/6ML8Yv1.png) ![Firebase server](http://i.imgur.com/ZmHwwEa.png)
 
 App when user is in Holmes Lounge
-
+<p align="center">
 ![nmap example output](http://i.imgur.com/IpyGTd7.png)
-
+</p>
 Nap example output
-
+<p align="center">
 ![nmap sample output](http://i.imgur.com/xIjsbnM.png)
-
+</p>
 Nmap hostCount sample output
