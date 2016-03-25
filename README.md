@@ -65,4 +65,4 @@ Nap example output
 <p align="center">
 	<img alt="nmap sample output" src="http://i.imgur.com/xIjsbnM.png">
 </p>
-Nmap hostCount sample output
+Nmap hostCount sample output 
