@@ -259,6 +259,7 @@
 				TargetAttributes = {
 					2A2424581C7E1F7B001157FA = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = R5ZJKN7GW2;
 					};
 					2A2424741C7E1F7C001157FA = {
 						CreatedOnToolsVersion = 7.2;
@@ -517,10 +518,13 @@
 			baseConfigurationReference = D7626600ED7A4F3F30D1D1C0 /* Pods-KraudeSorce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KraudeSorce/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yashdalal.KraudeSorce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -529,10 +533,13 @@
 			baseConfigurationReference = 84321CD222AC4074CC13804A /* Pods-KraudeSorce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KraudeSorce/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yashdalal.KraudeSorce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

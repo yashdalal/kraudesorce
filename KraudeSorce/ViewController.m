@@ -59,7 +59,7 @@ NSInteger userCount;
     Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/locations/holmesLounge",FirebaseURL]];
     
     
-    if(crnLoc.coordinate.latitude>38 && crnLoc.coordinate.latitude< 39 && crnLoc.coordinate.longitude<-90 && crnLoc.coordinate.longitude>-91){
+    if(crnLoc.coordinate.latitude>38.648065 && crnLoc.coordinate.latitude<38.648243 && crnLoc.coordinate.longitude<-90.306222 && crnLoc.coordinate.longitude>-90.306667){
         
         if(!isInHolmesLounge){
             
