@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    passwordfield.delegate = self;
     // Do any additional setup after loading the view.
 }
 
@@ -46,6 +47,12 @@
             NSLog(@"Successfully created user account with uid: %@", uid);
         }
     }];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 /*

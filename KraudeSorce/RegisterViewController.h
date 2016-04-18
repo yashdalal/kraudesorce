@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UnderlineTextField.h"
 
-@interface RegisterViewController : UIViewController{
+@interface RegisterViewController : UIViewController<UITextFieldDelegate>{
     IBOutlet UnderlineTextField *usernamefield;
     IBOutlet UnderlineTextField *passwordfield;
     IBOutlet UILabel *errorMessage;

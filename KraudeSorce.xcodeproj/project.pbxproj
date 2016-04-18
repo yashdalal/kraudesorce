@@ -19,8 +19,10 @@
 		2A2424931C7E1FB0001157FA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2424921C7E1FB0001157FA /* CoreLocation.framework */; };
 		2A2D3CFE1C8F641300B79E35 /* UnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D3CFD1C8F641300B79E35 /* UnderlineTextField.m */; };
 		2A8EAF171C7FD7D30023DBE6 /* holmes.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2A8EAF161C7FD7D30023DBE6 /* holmes.gpx */; };
+		2A9025FE1CC537C9002FB219 /* holmes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A9025FD1CC537C9002FB219 /* holmes.jpg */; };
 		2AC432BB1C87504E00B5DA16 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC432BA1C87504E00B5DA16 /* LoginViewController.m */; };
 		2AC432BE1C8754FE00B5DA16 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC432BD1C8754FE00B5DA16 /* RegisterViewController.m */; };
+		CBA3F23CEC5A6B1F1794C136 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4D24437A7F6EA9BC649F53 /* libPods.a */; };
 		D34F4F5F15AC857AFCAB701F /* libPods-KraudeSorce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCABDF4812E120FEBE5558B6 /* libPods-KraudeSorce.a */; };
 /* End PBXBuildFile section */
 
@@ -63,10 +65,12 @@
 		2A2D3CFC1C8F641300B79E35 /* UnderlineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderlineTextField.h; sourceTree = "<group>"; };
 		2A2D3CFD1C8F641300B79E35 /* UnderlineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnderlineTextField.m; sourceTree = "<group>"; };
 		2A8EAF161C7FD7D30023DBE6 /* holmes.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = holmes.gpx; sourceTree = "<group>"; };
+		2A9025FD1CC537C9002FB219 /* holmes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = holmes.jpg; sourceTree = "<group>"; };
 		2AC432B91C87504E00B5DA16 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2AC432BA1C87504E00B5DA16 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2AC432BC1C8754FE00B5DA16 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		2AC432BD1C8754FE00B5DA16 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		3F4D24437A7F6EA9BC649F53 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		84321CD222AC4074CC13804A /* Pods-KraudeSorce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KraudeSorce.release.xcconfig"; path = "Pods/Target Support Files/Pods-KraudeSorce/Pods-KraudeSorce.release.xcconfig"; sourceTree = "<group>"; };
 		D7626600ED7A4F3F30D1D1C0 /* Pods-KraudeSorce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KraudeSorce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KraudeSorce/Pods-KraudeSorce.debug.xcconfig"; sourceTree = "<group>"; };
 		DCABDF4812E120FEBE5558B6 /* libPods-KraudeSorce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KraudeSorce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,7 @@
 			files = (
 				2A2424931C7E1FB0001157FA /* CoreLocation.framework in Frameworks */,
 				D34F4F5F15AC857AFCAB701F /* libPods-KraudeSorce.a in Frameworks */,
+				CBA3F23CEC5A6B1F1794C136 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +131,7 @@
 		2A24245B1C7E1F7B001157FA /* KraudeSorce */ = {
 			isa = PBXGroup;
 			children = (
+				2A9025FD1CC537C9002FB219 /* holmes.jpg */,
 				2A24245F1C7E1F7B001157FA /* AppDelegate.h */,
 				2A2424601C7E1F7B001157FA /* AppDelegate.m */,
 				2A2424621C7E1F7B001157FA /* ViewController.h */,
@@ -185,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				DCABDF4812E120FEBE5558B6 /* libPods-KraudeSorce.a */,
+				3F4D24437A7F6EA9BC649F53 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -299,6 +306,7 @@
 				2A24246C1C7E1F7C001157FA /* Assets.xcassets in Resources */,
 				2A2424671C7E1F7B001157FA /* Main.storyboard in Resources */,
 				2A8EAF171C7FD7D30023DBE6 /* holmes.gpx in Resources */,
+				2A9025FE1CC537C9002FB219 /* holmes.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +339,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KraudeSorce/Pods-KraudeSorce-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3860F2C7B2959321EB447145 /* Check Pods Manifest.lock */ = {
@@ -361,7 +369,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KraudeSorce/Pods-KraudeSorce-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
