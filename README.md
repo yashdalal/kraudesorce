@@ -47,7 +47,7 @@ Features
 Screenshots
 ----
 
-![KraudeSorce app icon on the home screen ](http://i.imgur.com/ozNrxl1.png) ![Login Screen](http://i.imgur.com/2THxji3.png)
+![KraudeSorce app icon on the home screen ](http://i.imgur.com/oV59MZ0.png) ![Login Screen](http://i.imgur.com/2THxji3.png)
 
 KraudeSorce app on the home screen and the app's login screen
 
