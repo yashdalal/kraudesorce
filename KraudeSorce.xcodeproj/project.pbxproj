@@ -18,6 +18,7 @@
 		2A2424851C7E1F7C001157FA /* KraudeSorceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2424841C7E1F7C001157FA /* KraudeSorceUITests.m */; };
 		2A2424931C7E1FB0001157FA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2424921C7E1FB0001157FA /* CoreLocation.framework */; };
 		2A2D3CFE1C8F641300B79E35 /* UnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D3CFD1C8F641300B79E35 /* UnderlineTextField.m */; };
+		2A57FCC61CCDC3BB0033E48E /* LocationListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A57FCC51CCDC3BB0033E48E /* LocationListTableViewController.m */; };
 		2A8EAF171C7FD7D30023DBE6 /* holmes.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2A8EAF161C7FD7D30023DBE6 /* holmes.gpx */; };
 		2A9025FE1CC537C9002FB219 /* holmes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A9025FD1CC537C9002FB219 /* holmes.jpg */; };
 		2AC432BB1C87504E00B5DA16 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC432BA1C87504E00B5DA16 /* LoginViewController.m */; };
@@ -64,6 +65,8 @@
 		2A2424921C7E1FB0001157FA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2A2D3CFC1C8F641300B79E35 /* UnderlineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderlineTextField.h; sourceTree = "<group>"; };
 		2A2D3CFD1C8F641300B79E35 /* UnderlineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnderlineTextField.m; sourceTree = "<group>"; };
+		2A57FCC41CCDC3BB0033E48E /* LocationListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationListTableViewController.h; sourceTree = "<group>"; };
+		2A57FCC51CCDC3BB0033E48E /* LocationListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationListTableViewController.m; sourceTree = "<group>"; };
 		2A8EAF161C7FD7D30023DBE6 /* holmes.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = holmes.gpx; sourceTree = "<group>"; };
 		2A9025FD1CC537C9002FB219 /* holmes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = holmes.jpg; sourceTree = "<group>"; };
 		2AC432B91C87504E00B5DA16 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				2AC432BD1C8754FE00B5DA16 /* RegisterViewController.m */,
 				2A2D3CFC1C8F641300B79E35 /* UnderlineTextField.h */,
 				2A2D3CFD1C8F641300B79E35 /* UnderlineTextField.m */,
+				2A57FCC41CCDC3BB0033E48E /* LocationListTableViewController.h */,
+				2A57FCC51CCDC3BB0033E48E /* LocationListTableViewController.m */,
 			);
 			path = KraudeSorce;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A57FCC61CCDC3BB0033E48E /* LocationListTableViewController.m in Sources */,
 				2A24246A1C7E1F7B001157FA /* KraudeSorce.xcdatamodeld in Sources */,
 				2AC432BE1C8754FE00B5DA16 /* RegisterViewController.m in Sources */,
 				2A2424641C7E1F7B001157FA /* ViewController.m in Sources */,

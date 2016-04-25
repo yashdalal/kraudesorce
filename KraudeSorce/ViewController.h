@@ -14,6 +14,9 @@
     IBOutlet UILabel *longitude;
     IBOutlet UILabel *altitude;
     IBOutlet UILabel *speed;
+    
+    IBOutlet UILabel *rating;
+    IBOutlet UILabel *amIinHolmes;
     CLLocationManager *locationManager;
 }
 
