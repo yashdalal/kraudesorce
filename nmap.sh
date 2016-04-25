@@ -22,7 +22,7 @@ tr '\n' ' ' < data.json > data2.json;
 tput setaf 10;
 echo "Sending data to server ...";
 tput sgr0;
-firebase data:update /locations/holmesLounge/ data2.json -f fiery-inferno-2827 -y;
+firebase data:update /locations/holmesLounge/analytics/currentCount data2.json -f fiery-inferno-2827 -y;
 echo "Number of devices connected to this network:";
 tput setaf 12;
 cat hosts.txt;
