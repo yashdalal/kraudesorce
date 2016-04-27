@@ -52,33 +52,34 @@ NSInteger userCount;
 }
 
 -(void) checkBusiness{
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
-    [dateFormatter setTimeZone:timeZone];
-    [dateFormatter setDateFormat:@"EEEE"];
-    NSString *today = [dateFormatter stringFromDate:[NSDate date]];
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+//    NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
+//    [dateFormatter setTimeZone:timeZone];
+//    [dateFormatter setDateFormat:@"EEEE"];
+//    NSString *today = [dateFormatter stringFromDate:[NSDate date]];
+//    
+//    
+//    NSString *hour = [self hourToNearestFifteen];
+//    
+//    //Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/locations/holmesLounge/meanData/%@/%@",FirebaseURL, today, hour]];
+//    Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/locations/holmesLounge/analytics/currentCount",FirebaseURL]];
+//    
+//    __block NSInteger holmesMean;
+//    
+//    [ref observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *holmesSnapshot) {
+//        holmesMean = [holmesSnapshot.value[@"userCount"] integerValue];
     
-    
-    NSString *hour = [self hourToNearestFifteen];
-    
-    //Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/locations/holmesLounge/meanData/%@/%@",FirebaseURL, today, hour]];
-    Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/locations/holmesLounge/analytics/currentCount",FirebaseURL]];
-    
-    __block NSInteger holmesMean;
-    
-    [ref observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *holmesSnapshot) {
-        holmesMean = [holmesSnapshot.value[@"userCount"] integerValue];
-        if(holmesMean == 1){
+        if(userCount == 1){
             _rating.text = @"Empty";
-        }else if(holmesMean == 2){
+        }else if(userCount == 2){
             _rating.text = @"Busy";
-        }else if(holmesMean == 3){
+        }else if(userCount == 3){
             _rating.text = @"Full";
         }
-    } withCancelBlock:^(NSError *error) {
-        NSLog(@"%@", error.description);
-    }];
-    
+//    } withCancelBlock:^(NSError *error) {
+//        NSLog(@"%@", error.description);
+//    }];
+//    
 }
 
 -(NSString*) hourToNearestFifteen {
@@ -124,6 +125,7 @@ NSInteger userCount;
                 NSLog(@"%@", error.description);
             }];
             userCount++;
+            NSLog(@"usercount is: %ld", (long)userCount);
             
             //overwrite database usercount with new one (increased by 1)
             Firebase *countRef = [ref childByAppendingPath: @"userCount"];
@@ -143,6 +145,7 @@ NSInteger userCount;
                 NSLog(@"%@", error.description);
             }];
             userCount--;
+            NSLog(@"usercount is: %ld", (long)userCount);
             
             //overwrite database usercount with new one (increased by 1)
             Firebase *countRef = [ref childByAppendingPath: @"userCount"];
