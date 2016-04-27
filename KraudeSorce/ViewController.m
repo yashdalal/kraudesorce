@@ -62,16 +62,18 @@ NSInteger userCount;
     NSString *hour = [self hourToNearestFifteen];
     
     //Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/locations/holmesLounge/meanData/%@/%@",FirebaseURL, today, hour]];
-    Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/locations/holmesLounge/meanData/Monday/12:00",FirebaseURL]];
+    Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/locations/holmesLounge/analytics/currentCount",FirebaseURL]];
     
     __block NSInteger holmesMean;
     
     [ref observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *holmesSnapshot) {
-        holmesMean = [holmesSnapshot.value[@"mean"] integerValue];
-        if(holmesMean < 55){
+        holmesMean = [holmesSnapshot.value[@"userCount"] integerValue];
+        if(holmesMean == 1){
             _rating.text = @"Empty";
-        }else{
+        }else if(holmesMean == 2){
             _rating.text = @"Busy";
+        }else if(holmesMean == 3){
+            _rating.text = @"Full";
         }
     } withCancelBlock:^(NSError *error) {
         NSLog(@"%@", error.description);
