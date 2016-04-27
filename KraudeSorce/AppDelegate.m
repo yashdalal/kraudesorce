@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "Location.h"
+#import "LocationListTableViewController.h"
+#import "LoginViewController.h"
+#import "NavViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +20,41 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //this should be changed eventually to pull from firebase
+    
+    _locations = [NSMutableArray arrayWithCapacity:20];
+    
+    Location *location1 = [[Location alloc]init];
+    location1.name = @"Holmes Lounge";
+    location1.busyLevel = @"Empty";
+    location1.image = @"washu-holmes.jpg";
+    [_locations addObject:location1];
+    
+    Location *location2 = [[Location alloc]init];
+    location2.name = @"DUC";
+    location2.busyLevel = @"Busy";
+    location2.image = @"washu-duc.jpg";
+    [_locations addObject:location2];
+    
+    Location *location3 = [[Location alloc]init];
+    location3.name = @"Whispers Cafe";
+    location3.busyLevel = @"Busy";
+    location3.image = @"washu-whispers.jpg";
+    [_locations addObject:location3];
+    
+    Location *location4 = [[Location alloc]init];
+    location4.name = @"Einsteins";
+    location4.busyLevel = @"Busy";
+    location4.image = @"washu-einstein.jpg";
+    [_locations addObject:location4];
+    
+    Location *location5 = [[Location alloc]init];
+    location5.name = @"Stanleys";
+    location5.busyLevel = @"Busy";
+    location5.image = @"washu-stanleys.jpg";
+    [_locations addObject:location5];
+
     // Override point for customization after application launch.
     return YES;
 }
