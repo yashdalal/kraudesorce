@@ -5,8 +5,9 @@
 //  Created by Yash Dalal on 4/24/16.
 //  Copyright © 2016 Yash Dalal. All rights reserved.
 //
-
+#import "Location.h"
 #import "LocationListTableViewController.h"
+#import "ViewController.h"
 
 @interface LocationListTableViewController ()
 
@@ -14,7 +15,12 @@
 
 @implementation LocationListTableViewController
 
+AppDelegate *appDelegate;
+
+
 - (void)viewDidLoad {
+    appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    self.locations = appDelegate.locations;
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -36,12 +42,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [self.locations count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationListCell" forIndexPath:indexPath];
+    
+    Location *location = (self.locations)[indexPath.row];
+    cell.textLabel.text = location.name;
+    cell.detailTextLabel.text = location.busyLevel;
         
     return cell;
 }
@@ -81,14 +92,24 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"displayLocation"]){
+        NSIndexPath *ip = [self.tableView indexPathForSelectedRow];
+        
+        ViewController *vc = (ViewController *)[segue destinationViewController];
+        
+        Location *current = [self.locations objectAtIndex:ip.row];
+        
+        vc.lName = current.name;
+        vc.rat = current.busyLevel;
+        NSLog(@"%@ %@", current.name, current.image);
+        vc.imageTitle = current.image;
+    }
 }
-*/
+
 
 @end

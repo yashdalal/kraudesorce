@@ -22,6 +22,11 @@ NSInteger userCount;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _locationName.text = _lName;
+    _rating.text = _rat;
+    [_image setImage:[UIImage imageNamed:_imageTitle]];
+    
     [self checkBusiness];
     locationManager = [[CLLocationManager alloc]init]; // initializing locationManager
     locationManager.delegate = self; // we set the delegate of locationManager to self.
@@ -57,16 +62,18 @@ NSInteger userCount;
     NSString *hour = [self hourToNearestFifteen];
     
     //Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/locations/holmesLounge/meanData/%@/%@",FirebaseURL, today, hour]];
-    Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/locations/holmesLounge/meanData/Monday/12:00",FirebaseURL]];
+    Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/locations/holmesLounge/analytics/currentCount",FirebaseURL]];
     
     __block NSInteger holmesMean;
     
     [ref observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *holmesSnapshot) {
-        holmesMean = [holmesSnapshot.value[@"mean"] integerValue];
-        if(holmesMean < 55){
-            rating.text = @"Empty";
-        }else{
-            rating.text = @"Busy";
+        holmesMean = [holmesSnapshot.value[@"userCount"] integerValue];
+        if(holmesMean == 1){
+            _rating.text = @"Empty";
+        }else if(holmesMean == 2){
+            _rating.text = @"Busy";
+        }else if(holmesMean == 3){
+            _rating.text = @"Full";
         }
     } withCancelBlock:^(NSError *error) {
         NSLog(@"%@", error.description);
@@ -99,10 +106,6 @@ NSInteger userCount;
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *crnLoc = [locations lastObject];
-    latitude.text = [NSString stringWithFormat:@"%.8f",crnLoc.coordinate.latitude];
-    longitude.text = [NSString stringWithFormat:@"%.8f",crnLoc.coordinate.longitude];
-    altitude.text = [NSString stringWithFormat:@"%.0f m",crnLoc.altitude];
-    speed.text = [NSString stringWithFormat:@"%.1f m/s", crnLoc.speed];
     
     // Create a reference to a Firebase database URL
     Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"%@/locations/holmesLounge/analytics/currentCount",FirebaseURL]];

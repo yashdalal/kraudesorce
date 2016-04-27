@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A12F9681CD01CC0009B4FB9 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12F9671CD01CC0009B4FB9 /* Location.m */; };
+		2A12F96B1CD043B9009B4FB9 /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A12F96A1CD043B9009B4FB9 /* NavViewController.m */; };
+		2A12F9701CD055CE009B4FB9 /* washu-whispers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A12F96C1CD055CE009B4FB9 /* washu-whispers.jpg */; };
+		2A12F9711CD055CE009B4FB9 /* washu-stanleys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A12F96D1CD055CE009B4FB9 /* washu-stanleys.jpg */; };
+		2A12F9721CD055CE009B4FB9 /* washu-einstein.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A12F96E1CD055CE009B4FB9 /* washu-einstein.jpg */; };
+		2A12F9731CD055CE009B4FB9 /* washu-duc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A12F96F1CD055CE009B4FB9 /* washu-duc.jpg */; };
 		2A24245E1C7E1F7B001157FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A24245D1C7E1F7B001157FA /* main.m */; };
 		2A2424611C7E1F7B001157FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2424601C7E1F7B001157FA /* AppDelegate.m */; };
 		2A2424641C7E1F7B001157FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2424631C7E1F7B001157FA /* ViewController.m */; };
@@ -20,7 +26,7 @@
 		2A2D3CFE1C8F641300B79E35 /* UnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D3CFD1C8F641300B79E35 /* UnderlineTextField.m */; };
 		2A57FCC61CCDC3BB0033E48E /* LocationListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A57FCC51CCDC3BB0033E48E /* LocationListTableViewController.m */; };
 		2A8EAF171C7FD7D30023DBE6 /* holmes.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2A8EAF161C7FD7D30023DBE6 /* holmes.gpx */; };
-		2A9025FE1CC537C9002FB219 /* holmes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A9025FD1CC537C9002FB219 /* holmes.jpg */; };
+		2A9025FE1CC537C9002FB219 /* washu-holmes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A9025FD1CC537C9002FB219 /* washu-holmes.jpg */; };
 		2AC432BB1C87504E00B5DA16 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC432BA1C87504E00B5DA16 /* LoginViewController.m */; };
 		2AC432BE1C8754FE00B5DA16 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC432BD1C8754FE00B5DA16 /* RegisterViewController.m */; };
 		CBA3F23CEC5A6B1F1794C136 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4D24437A7F6EA9BC649F53 /* libPods.a */; };
@@ -45,6 +51,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A12F9661CD01CC0009B4FB9 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		2A12F9671CD01CC0009B4FB9 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		2A12F9691CD043B9009B4FB9 /* NavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavViewController.h; sourceTree = "<group>"; };
+		2A12F96A1CD043B9009B4FB9 /* NavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavViewController.m; sourceTree = "<group>"; };
+		2A12F96C1CD055CE009B4FB9 /* washu-whispers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "washu-whispers.jpg"; sourceTree = "<group>"; };
+		2A12F96D1CD055CE009B4FB9 /* washu-stanleys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "washu-stanleys.jpg"; sourceTree = "<group>"; };
+		2A12F96E1CD055CE009B4FB9 /* washu-einstein.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "washu-einstein.jpg"; sourceTree = "<group>"; };
+		2A12F96F1CD055CE009B4FB9 /* washu-duc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "washu-duc.jpg"; sourceTree = "<group>"; };
 		2A2424591C7E1F7B001157FA /* KraudeSorce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KraudeSorce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A24245D1C7E1F7B001157FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2A24245F1C7E1F7B001157FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,7 +82,7 @@
 		2A57FCC41CCDC3BB0033E48E /* LocationListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationListTableViewController.h; sourceTree = "<group>"; };
 		2A57FCC51CCDC3BB0033E48E /* LocationListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationListTableViewController.m; sourceTree = "<group>"; };
 		2A8EAF161C7FD7D30023DBE6 /* holmes.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = holmes.gpx; sourceTree = "<group>"; };
-		2A9025FD1CC537C9002FB219 /* holmes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = holmes.jpg; sourceTree = "<group>"; };
+		2A9025FD1CC537C9002FB219 /* washu-holmes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "washu-holmes.jpg"; sourceTree = "<group>"; };
 		2AC432B91C87504E00B5DA16 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2AC432BA1C87504E00B5DA16 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2AC432BC1C8754FE00B5DA16 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -134,7 +148,11 @@
 		2A24245B1C7E1F7B001157FA /* KraudeSorce */ = {
 			isa = PBXGroup;
 			children = (
-				2A9025FD1CC537C9002FB219 /* holmes.jpg */,
+				2A12F96C1CD055CE009B4FB9 /* washu-whispers.jpg */,
+				2A12F96D1CD055CE009B4FB9 /* washu-stanleys.jpg */,
+				2A12F96E1CD055CE009B4FB9 /* washu-einstein.jpg */,
+				2A12F96F1CD055CE009B4FB9 /* washu-duc.jpg */,
+				2A9025FD1CC537C9002FB219 /* washu-holmes.jpg */,
 				2A24245F1C7E1F7B001157FA /* AppDelegate.h */,
 				2A2424601C7E1F7B001157FA /* AppDelegate.m */,
 				2A2424621C7E1F7B001157FA /* ViewController.h */,
@@ -153,6 +171,10 @@
 				2A2D3CFD1C8F641300B79E35 /* UnderlineTextField.m */,
 				2A57FCC41CCDC3BB0033E48E /* LocationListTableViewController.h */,
 				2A57FCC51CCDC3BB0033E48E /* LocationListTableViewController.m */,
+				2A12F9661CD01CC0009B4FB9 /* Location.h */,
+				2A12F9671CD01CC0009B4FB9 /* Location.m */,
+				2A12F9691CD043B9009B4FB9 /* NavViewController.h */,
+				2A12F96A1CD043B9009B4FB9 /* NavViewController.m */,
 			);
 			path = KraudeSorce;
 			sourceTree = "<group>";
@@ -308,10 +330,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A24246F1C7E1F7C001157FA /* LaunchScreen.storyboard in Resources */,
+				2A12F9701CD055CE009B4FB9 /* washu-whispers.jpg in Resources */,
 				2A24246C1C7E1F7C001157FA /* Assets.xcassets in Resources */,
 				2A2424671C7E1F7B001157FA /* Main.storyboard in Resources */,
+				2A12F9711CD055CE009B4FB9 /* washu-stanleys.jpg in Resources */,
+				2A12F9721CD055CE009B4FB9 /* washu-einstein.jpg in Resources */,
 				2A8EAF171C7FD7D30023DBE6 /* holmes.gpx in Resources */,
-				2A9025FE1CC537C9002FB219 /* holmes.jpg in Resources */,
+				2A12F9731CD055CE009B4FB9 /* washu-duc.jpg in Resources */,
+				2A9025FE1CC537C9002FB219 /* washu-holmes.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +414,8 @@
 				2A24246A1C7E1F7B001157FA /* KraudeSorce.xcdatamodeld in Sources */,
 				2AC432BE1C8754FE00B5DA16 /* RegisterViewController.m in Sources */,
 				2A2424641C7E1F7B001157FA /* ViewController.m in Sources */,
+				2A12F96B1CD043B9009B4FB9 /* NavViewController.m in Sources */,
+				2A12F9681CD01CC0009B4FB9 /* Location.m in Sources */,
 				2A2424611C7E1F7B001157FA /* AppDelegate.m in Sources */,
 				2A2D3CFE1C8F641300B79E35 /* UnderlineTextField.m in Sources */,
 				2A24245E1C7E1F7B001157FA /* main.m in Sources */,

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
 @interface LocationListTableViewController : UITableViewController
+
+@property (nonatomic, strong) NSMutableArray *locations;
 
 @end
