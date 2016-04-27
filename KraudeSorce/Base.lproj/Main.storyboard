@@ -214,7 +214,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3yq-H0-OfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="227"/>
+            <point key="canvasLocation" x="286" y="251"/>
+        </scene>
+        <!--Location List Table View Controller-->
+        <scene sceneID="o9a-ea-ube">
+            <objects>
+                <tableViewController id="2Df-oG-HxI" customClass="LocationListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" id="YPF-J9-8ek">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationListCell" rowHeight="83" id="gD6-2V-DRX">
+                                <rect key="frame" x="0.0" y="28" width="600" height="83"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gD6-2V-DRX" id="ELN-F7-VhR">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="82"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwV-cb-1ZM">
+                                            <rect key="frame" x="8" y="8" width="207" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How busy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrN-dt-EZF">
+                                            <rect key="frame" x="8" y="40" width="76" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="6eL-3K-B1q"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2Df-oG-HxI" id="CBn-qM-bSe"/>
+                            <outlet property="delegate" destination="2Df-oG-HxI" id="v9A-aJ-Emg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bZr-WM-uXx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286" y="1060"/>
         </scene>
         <!--location-->
         <scene sceneID="tne-QT-ifu">
@@ -352,4 +397,7 @@
             <point key="canvasLocation" x="286" y="1079"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yvb-Fj-cXk"/>
+    </inferredMetricsTieBreakers>
 </document>
